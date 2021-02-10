@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Wallet Bonus track</string>
+    <string name="card_number">Número de tarjeta</string>
+    <string name="expiration_date">Fecha de expiración</string>
+    <string name="security_code">Código de seguridad</string>
+    <string name="card_name">Nombre en la tarjeta</string>
+    <string name="add">Agregar</string>
 </resources>
