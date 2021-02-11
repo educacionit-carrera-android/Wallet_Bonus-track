@@ -18,6 +18,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:maxLength="12"
         android:inputType="number" />
 
     <LinearLayout
@@ -51,6 +52,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
+            android:maxLength="5"
             android:inputType="date" />
 
         <EditText
@@ -59,7 +61,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
-            android:inputType="number" />
+            android:inputType="number"
+            android:maxLength="3" />
     </LinearLayout>
 
     <TextView
