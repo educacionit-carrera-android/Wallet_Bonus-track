@@ -1,5 +1,6 @@
 package com.example.walletbonustrack;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -35,7 +36,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (datosValidos()) {
-                    // TODO Bonus track - parte 3
+                    Intent intent = new Intent(MainActivity.this, HomeActivity.class);
+                    startActivity(intent);
                 } else {
                     Toast.makeText(MainActivity.this, "Datos inválidos", Toast.LENGTH_SHORT).show();
                 }
