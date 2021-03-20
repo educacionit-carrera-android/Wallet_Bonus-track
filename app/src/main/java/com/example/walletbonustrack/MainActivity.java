@@ -38,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
                 if (datosValidos()) {
                     Intent intent = new Intent(MainActivity.this, HomeActivity.class);
                     startActivity(intent);
+                    finish();
                 } else {
                     Toast.makeText(MainActivity.this, "Datos inválidos", Toast.LENGTH_SHORT).show();
                 }
