@@ -44,8 +44,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (datosValidos()) {
-                    Intent intent = new Intent(MainActivity.this, HomeActivity.class);
-                    startActivity(intent);
                     finish();
                 } else {
                     Toast.makeText(MainActivity.this, "Datos inválidos", Toast.LENGTH_SHORT).show();
