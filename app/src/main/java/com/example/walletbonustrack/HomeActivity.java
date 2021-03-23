@@ -3,6 +3,7 @@ package com.example.walletbonustrack;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
@@ -12,14 +13,22 @@ public class HomeActivity extends AppCompatActivity {
 
     private RecyclerView rvCards;
     private CardsAdapter adapter;
+    private Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
+        setupToolbar();
         setupUI();
         setupAdapter();
+    }
+
+    private void setupToolbar() {
+        toolbar = findViewById(R.id.toolbarHome);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle(R.string.my_cards);
     }
 
     private void setupUI() {
