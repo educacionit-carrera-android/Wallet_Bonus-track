@@ -8,4 +8,6 @@
     <string name="terms_and_conditions">Términos y condiciones</string>
     <string name="terms_and_conditions_card_text">Se almacenarán los datos de la tarjeta ingresada de manera local aplicando la última tecnología de encriptado. Estos datos sólamente se encontrarán dentro del dispositivo.\nUsted podrá borrar los datos de la aplicación en el momento que desee.\nEsta aplicación no se hace responsable por el uso indebido de los datos por parte del propietario del dispositivo. Se sugiere que se agregue un patrón de seguridad para evitar el acceso al mismo de manera directa.</string>
     <string name="my_cards">Mis tarjetas</string>
+    <string name="bank">Banco</string>
+    <string name="visa">VISA</string>
 </resources>

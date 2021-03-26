@@ -14,6 +14,11 @@ import java.util.List;
 public class CardsAdapter extends RecyclerView.Adapter<CardsAdapter.CardViewHolder> {
 
     private List<Card> cards = new ArrayList<>();
+    private OnItemClickListener listener;
+
+    public CardsAdapter(OnItemClickListener listener) {
+        this.listener = listener;
+    }
 
     @NonNull
     @Override
@@ -30,6 +35,12 @@ public class CardsAdapter extends RecyclerView.Adapter<CardsAdapter.CardViewHold
         Card card = cards.get(position);
         holder.txtNombre.setText(card.getNombre());
         holder.txtNumero.setText(card.getNumeroOfuscado());
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                listener.onItemClick(card);
+            }
+        });
     }
 
     @Override
@@ -53,5 +64,9 @@ public class CardsAdapter extends RecyclerView.Adapter<CardsAdapter.CardViewHold
             txtNombre = itemView.findViewById(R.id.textViewNombre);
             txtNumero = itemView.findViewById(R.id.textViewNumero);
         }
+    }
+
+    interface OnItemClickListener {
+        void onItemClick(Card tarjeta);
     }
 }

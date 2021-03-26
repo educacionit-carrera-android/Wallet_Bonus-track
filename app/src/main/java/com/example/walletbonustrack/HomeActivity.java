@@ -15,6 +15,7 @@ import java.util.List;
 
 public class HomeActivity extends AppCompatActivity {
 
+    final static String CARD = "tarjeta";
     private RecyclerView rvCards;
     private CardsAdapter adapter;
     private Toolbar toolbar;
@@ -40,7 +41,12 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     private void setupAdapter() {
-        adapter = new CardsAdapter();
+        adapter = new CardsAdapter(new CardsAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(Card tarjeta) {
+                goToDetalleTarjeta(tarjeta);
+            }
+        });
         rvCards.setAdapter(adapter);
         adapter.actualizarTarjetas(obtenerTarjetas());
     }
@@ -53,6 +59,12 @@ public class HomeActivity extends AppCompatActivity {
         cards.add(new Card("946383412490", "06/23", "912", "Esteban Garcia"));
 
         return cards;
+    }
+
+    private void goToDetalleTarjeta(Card tarjeta) {
+        Intent intent = new Intent(this, DetalleTarjetaActivity.class);
+        intent.putExtra(CARD, tarjeta);
+        startActivity(intent);
     }
 
     @Override
